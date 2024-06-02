@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     display: flex;
     justify-content: center;
@@ -54,9 +55,9 @@ body {
 }
 
 button {
-    padding: 20px;
+    padding: 10px;
     margin: 0;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     background-color: transparent;
     border: none;
@@ -66,4 +67,12 @@ button {
 
 button:hover {
     color: #666;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
 }
