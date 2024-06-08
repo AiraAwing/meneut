@@ -3,14 +3,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 #book {
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Adjust height dynamically based on viewport */
     position: relative;
     perspective: 2000px;
     display: flex;
@@ -22,7 +22,7 @@ body {
 }
 
 .page {
-    width: 45%;
+    width: 100%;
     height: 100%;
     position: absolute;
     transform-origin: left;
@@ -32,7 +32,6 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow effect */
 }
 
 .page img {
@@ -45,7 +44,6 @@ body {
 #page2 { z-index: 2; }
 #page3 { z-index: 1; }
 
-
 #controls {
     position: absolute;
     bottom: 10px;
@@ -57,15 +55,15 @@ body {
 }
 
 button {
-    padding: 15px; /* Increased padding */
+    padding: 15px;
     margin: 0;
-    font-size: 20px; /* Increased font size */
+    font-size: 20px;
     font-weight: 600;
     background-color: transparent;
     border: none;
     cursor: pointer;
     transition: color 0.3s;
-    border: 2px solid transparent; /* Add border for thickness */
+    border: 2px solid transparent;
 }
 
 button:hover {
@@ -74,8 +72,7 @@ button:hover {
 
 /* Mobile-specific styles */
 @media (max-width: 600px) {
-    button {
-        padding: 12px; /* Adjusted padding */
-        font-size: 18px; /* Adjusted font size */
+    #book {
+        height: calc(100vh - 40px); /* Adjust height dynamically and remove 40px for controls */
     }
 }
