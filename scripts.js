@@ -3,12 +3,12 @@ const totalPages = 3;
 
 document.getElementById('prev').addEventListener('click', () => {
     if (currentPage > 1) {
-        document.getElementById(`page${currentPage}`).style.transform = 'rotateY(0deg)';
+        document.getElementById(`page${currentPage}`).style.transform = 'rotateY(180deg)';
         currentPage--;
     } else {
-        document.getElementById(`page${currentPage}`).style.transform = 'rotateY(0deg)';
+        document.getElementById(`page${currentPage}`).style.transform = 'rotateY(180deg)';
         currentPage = totalPages;
-        for (let i = 1; i < totalPages; i++) {
+        for (let i = 1; i <= totalPages; i++) {
             document.getElementById(`page${i}`).style.transform = 'rotateY(0deg)';
         }
     }
